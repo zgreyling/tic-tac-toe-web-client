@@ -1,0 +1,20 @@
+<div class="row board" style="margin: auto;">
+    {{#each @boardSquares as |square|}}
+    <div class="col-4 px-0 inline-block" align="center">
+        <div
+            class="square {{if square.value "selected-square"}} {{if square.winning_square "winning-square"}}"
+            {{on "click" (fn this.selectSquare square)}}
+        >
+            {{#if (eq square.value "X")}}
+            <div class="icon-size" style="color: white; {{if square.winning_square "color: #01cd6a;"}}">
+                <i class="fa fa-times" />
+            </div>
+            {{else if (eq square.value "O")}}
+            <div class="icon-size" style="color: white; {{if square.winning_square "color: #01cd6a;"}}">
+                <i class="fa fa-circle" />
+            </div>
+            {{/if}}
+        </div>
+    </div>
+    {{/each}}
+</div>

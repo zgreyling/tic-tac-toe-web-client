@@ -2,9 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>TicTacToeWebClient</title>
+    <title>Tic Tac Toe</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 
     {{content-for "head"}}
 
@@ -13,7 +15,9 @@
 
     {{content-for "head-footer"}}
   </head>
-  <body>
+  <body
+    class="game-background"
+  >
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>

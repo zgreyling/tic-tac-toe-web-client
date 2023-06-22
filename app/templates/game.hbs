@@ -1,0 +1,26 @@
+<div class="game">  
+	<div class="fluid-container game-container">
+		<div class="header-text div-horizontal-center heading">
+			<span class="tic">Tic</span>-<span class="tac">Tac</span>-<span class="toe">Toe</span>
+		</div>
+		<Board @boardSquares={{this.game.gameData.squares}}/>
+		<div class="winner-text header-text div-center mt-3">
+			{{#if this.game.gameData.winner}}
+			<div class="text-center">Game Over! The winner is player {{this.game.gameData.winner}}.</div>
+			{{else if this.game.gameData.game_over}}
+			<div class="text-center">Game Over! It's a draw.</div>
+			{{else}}
+			<div class="text-center">Player {{this.game.gameData.current_player}}'s move...</div>
+			{{/if}}
+		</div>
+		<div class="div-center my-4">
+			<button
+				{{on "click" this.newGame}}
+				type="button"
+				class="btn btn-primary btn-lg"
+			>
+				New Game
+			</button>
+		</div>
+	</div>
+</div>
