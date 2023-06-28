@@ -7,7 +7,7 @@ export default class BoardComponent extends Component {
 
   @action
   async selectSquare(square) {
-    if (this.game.gameData.game_over === false) {
+    if (this.game.gameData.game_over === false && !square.value) {
       delete square.square;
       await this.game.update(square);
     }
